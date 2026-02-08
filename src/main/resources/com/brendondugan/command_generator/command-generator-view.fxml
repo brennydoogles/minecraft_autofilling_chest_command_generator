@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox prefHeight="800" prefWidth="1200" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.brendondugan.command_generator.CommandGeneratorController" spacing="20">
+    <children>
+        <HBox alignment="CENTER" spacing="20" VBox.vgrow="NEVER">
+            <Label>
+                Block Name:
+            </Label>
+            <TextField id="blockTypeField" fx:id="blockTypeField" />
+            <Label>
+                Color:
+            </Label>
+         <ChoiceBox id="colorPicker" fx:id="colorPicker" />
+         <Label text="Chest Direction:">
+         </Label>
+         <ChoiceBox fx:id="chestDirectionPicker" prefWidth="150.0" />
+            <Button mnemonicParsing="false" onAction="#generate" text="Generate Command" />
+        </HBox>
+      <HBox VBox.vgrow="ALWAYS">
+         <children>
+             <AnchorPane disable="true" HBox.hgrow="ALWAYS">
+                 <TextArea fx:id="outputArea" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0" />
+             </AnchorPane>
+         </children>
+
+      </HBox>
+    </children>
+    <padding>
+        <Insets top="40" bottom="40" left="40" right="40"  />
+    </padding>
+</VBox>
